@@ -38,13 +38,13 @@
 
         // let theCircle = <Circle bgcolor='blue'/> //1
 
-        // function showCircle () { //2
-        //     let colors = ['red', 'green', 'yellow', 'blue', 'grey']
-        //     let run = Math.floor(Math.random()*colors.length)
-        //     return (
-        //         <Circle bgcolor={colors[run]}/>
-        //     )
-        // }
+        function showCircle () { //2
+            let colors = ['red', 'green', 'yellow', 'blue', 'grey']
+            let run = Math.floor(Math.random()*colors.length)
+            return (
+                <Circle bgcolor={colors[run]}/>
+            )
+        }
 
         // let colors = ['red', 'yellow', 'green'] //3
         // let circles = []
@@ -54,9 +54,9 @@
         //     }
 
         ReactDOM.render(
-            <div><Circle bgcolor='green'/></div>, //0
+            // <div><Circle bgcolor='green'/></div>, //0
             // <div>{theCircle}</div>, //1
-            // <div>{showCircle()}</div>, //2
+            <div>{showCircle()}</div>, //2
             // <div>{circles}</div>, //3
             document.querySelector('#container')
             )

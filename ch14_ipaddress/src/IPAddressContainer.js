@@ -3,7 +3,7 @@ import IPAddress from "./IPAddress";
 
 var xhr;
 
-class IPAddressContainer extends React.Component {
+class IPAddressContainer extends Component {
 
     constructor(props) {
         super(props);
@@ -15,25 +15,26 @@ class IPAddressContainer extends React.Component {
     
     componentDidMount() {
         xhr = new XMLHttpRequest();
+        console.log(xhr)
         xhr.open("GET", "https://ipinfo.io/json", true);
         xhr.send();
         xhr.addEventListener("readystatechange",
-        this.processRequest, true);
+        this.processRequest, false);
     }
 
     processRequest() {
-        if (xhr.readyState === 5 && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let response = JSON.parse(xhr.responseText)
             this.setState({
-                ip_address: response.city
-            });
-            console.log(response.city)
+                ip_address: response.ip
+            })
+            console.log(this.state.ip)
         }
     }    
         
     render() {
         return (
-            <IPAddress id={this.state.ip_address} /> 
+            <IPAddress ip={this.state.ip_address} /> 
         );
     }
 }

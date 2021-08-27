@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './IPAddress.css';
 
-class IPAddress extends React.Component {
+class IPAddress extends Component {
     render () {
         return (
             <div>

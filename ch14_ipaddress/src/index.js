@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import IPAddressContainer from './xhr_IPAddressContainer';
+import IPAddressContainer from './IPAddressContainer';
 
 let destination = document.querySelector('#container')
 

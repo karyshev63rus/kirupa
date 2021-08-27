@@ -3,7 +3,7 @@ import IPAddress from "./IPAddress";
 
 var xhr;
 
-class IPAddressContainer extends Component {
+class IPAddressContainer extends React.Component {
 
     constructor(props) {
         super(props);

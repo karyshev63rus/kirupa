@@ -28,7 +28,7 @@ class IPAddressContainer extends Component {
             this.setState({
                 ip_address: response.ip
             })
-            console.log(this.state.ip)
+            console.log(this.state.ip_address)
         }
     }    
         
